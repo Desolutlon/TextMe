@@ -1,0 +1,190 @@
+/* ============================================================
+   SillyTavern WhatsApp Bridge - Styles
+   ============================================================ */
+
+/* -- Settings Container -- */
+.wa_bridge_settings {
+    font-size: 0.9em;
+}
+
+.wa_bridge_settings .inline-drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+/* -- Status Row -- */
+.wa_bridge_status_row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: var(--SmartThemeBotMesBlurTintColor, rgba(0, 0, 0, 0.15));
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+/* -- Connection Indicator Dot -- */
+.wa_bridge_indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.wa_bridge_indicator--disconnected {
+    background-color: #6b7280;
+}
+
+.wa_bridge_indicator--connecting,
+.wa_bridge_indicator--qr_pending {
+    background-color: #f59e0b;
+    animation: wa_bridge_pulse 1.5s ease-in-out infinite;
+}
+
+.wa_bridge_indicator--connected {
+    background-color: #25d366; /* WhatsApp green */
+}
+
+.wa_bridge_indicator--error {
+    background-color: #ef4444;
+}
+
+@keyframes wa_bridge_pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* -- Client Info -- */
+.wa_bridge_client_info {
+    font-weight: 400;
+    font-size: 0.85em;
+    opacity: 0.7;
+    margin-left: auto;
+}
+
+/* -- QR Code Container -- */
+.wa_bridge_qr_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: var(--SmartThemeBotMesBlurTintColor, rgba(0, 0, 0, 0.15));
+    border-radius: 8px;
+    border: 1px dashed var(--SmartThemeBorderColor, rgba(255, 255, 255, 0.15));
+}
+
+.wa_bridge_qr_label {
+    margin: 0;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.wa_bridge_qr_image {
+    width: 220px;
+    height: 220px;
+    border-radius: 6px;
+    background: white;
+    padding: 8px;
+}
+
+/* -- Button Row -- */
+.wa_bridge_button_row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.wa_bridge_button_row .menu_button {
+    flex: 1;
+    min-width: 100px;
+    font-size: 0.85em;
+    padding: 6px 12px;
+}
+
+.wa_bridge_button_row .menu_button_danger {
+    color: #ef4444;
+    border-color: #ef4444;
+}
+
+.wa_bridge_button_row .menu_button_danger:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+/* -- Divider -- */
+.wa_bridge_divider {
+    border: none;
+    border-top: 1px solid var(--SmartThemeBorderColor, rgba(255, 255, 255, 0.1));
+    margin: 4px 0;
+}
+
+/* -- Setting Rows -- */
+.wa_bridge_setting {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.wa_bridge_setting label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.wa_bridge_setting input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.wa_bridge_setting .text_pole {
+    font-size: 0.85em;
+    padding: 4px 8px;
+}
+
+.wa_bridge_hint {
+    font-size: 0.75em;
+    opacity: 0.5;
+    margin-left: 2px;
+}
+
+/* -- Scene State -- */
+.wa_bridge_scene_info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wa_bridge_scene_badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: rgba(107, 114, 128, 0.3);
+    color: #9ca3af;
+}
+
+.wa_bridge_scene_summary {
+    font-size: 0.8em;
+    opacity: 0.6;
+    font-style: italic;
+}
+
+/* -- Timer Info -- */
+.wa_bridge_timer_info {
+    font-size: 0.8em;
+    opacity: 0.6;
+    padding: 4px 0;
+}
+
+/* -- Utility -- */
+.hidden {
+    display: none !important;
+}

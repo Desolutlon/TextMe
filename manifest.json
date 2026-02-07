@@ -1,0 +1,14 @@
+{
+    "display_name": "WhatsApp Bridge",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "dependencies": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "WhatsAppBridge",
+    "version": "0.1.0",
+    "homePage": "https://github.com/your-username/SillyTavern-WhatsAppBridge",
+    "auto_update": true,
+    "minimum_client_version": "1.12.0"
+}
